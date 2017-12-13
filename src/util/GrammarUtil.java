@@ -46,7 +46,7 @@ public class GrammarUtil {
             for (Character rightChar : rightChars)
                 if (grammar.getN().contains(rightChar)) nonTerminalsCount++;
             final int terminalsCount = rightChars.size() - nonTerminalsCount;
-            if (terminalsCount != 1 || nonTerminalsCount > 1) return false;
+            if (terminalsCount > 1 || nonTerminalsCount > 1) return false;
         }
         return true;
     }
